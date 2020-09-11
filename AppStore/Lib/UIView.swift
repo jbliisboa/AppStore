@@ -1,17 +1,20 @@
+
 //
-//  UIView.swift
+//  UILabel.swift
 //  AppStore
 //
-//  Created by Tiago Oliveira on 08/02/20.
-//  Copyright © 2020 Tiago Oliveira. All rights reserved.
+//  Created by Admin on 25/05/20.
+//  Copyright © 2020 João Lisboa. All rights reserved.
 //
 
 import UIKit
 
 extension UIView {
   
-  func preencher(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = UIEdgeInsets.zero, size: CGSize = CGSize.zero) {
+  func fill(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = UIEdgeInsets.zero, size: CGSize = CGSize.zero) {
+    
     translatesAutoresizingMaskIntoConstraints = false
+    
     if let top = top {
       topAnchor.constraint(equalTo: top, constant: padding.top).isActive = true
     }
@@ -32,7 +35,7 @@ extension UIView {
     }
   }
   
-  func preencherSuperview(padding: UIEdgeInsets = .zero) {
+  func fillSuperview(padding: UIEdgeInsets = .zero) {
       translatesAutoresizingMaskIntoConstraints = false
       if let superviewTopAnchor = superview?.topAnchor {
           topAnchor.constraint(equalTo: superviewTopAnchor, constant: padding.top).isActive = true
@@ -51,7 +54,8 @@ extension UIView {
       }
   }
   
-  func centralizasSuperview(size: CGSize = .zero) {
+  func centralizeSuperview(size: CGSize = .zero) {
+    
       translatesAutoresizingMaskIntoConstraints = false
       
       if let superviewCenterXAnchor = superview?.centerXAnchor {
@@ -72,6 +76,7 @@ extension UIView {
   }
   
   func size(size: CGSize = .zero) {
+    
       translatesAutoresizingMaskIntoConstraints = false
       
       if size.width != 0 {

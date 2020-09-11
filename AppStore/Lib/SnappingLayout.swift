@@ -1,10 +1,11 @@
 //
-//  SnappingLayout.swift
-//  App Store
+//  UILabel.swift
+//  AppStore
 //
-//  Created by Tiago Oliveira on 26/09/19.
-//  Copyright © 2019 Tiago Oliveira. All rights reserved.
+//  Created by Admin on 25/05/20.
+//  Copyright © 2020 João Lisboa. All rights reserved.
 //
+
 
 import UIKit
 

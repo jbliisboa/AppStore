@@ -8,23 +8,36 @@
 
 import UIKit
 
-class BaseTabBArViewController: UIViewController {
+class BaseTabBArViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let todayVC = self.creatTabItem(viewController: TodayViewController(), title: "Hoje", image: "icone-hoje")
+        
+        let appsVC = self.creatTabItem(viewController: AppsViewController(), title: "Apps", image: "icone-apps")
+        
+        let searchVC = self.creatTabItem(viewController: SearchViewController(), title: "Busca", image: "icone-busca")
+        
+        viewControllers = [todayVC, appsVC, searchVC]
+        
+        selectedIndex = 0
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func creatTabItem (viewController: UIViewController, title: String, image: String) -> UIViewController{
+        
+        let navController = UINavigationController(rootViewController: viewController)
+        
+        navController.navigationBar.prefersLargeTitles = true
+        
+        viewController.navigationItem.title = title
+        viewController.tabBarItem.title = title
+        viewController.tabBarItem.image = UIImage(named: image)
+        viewController.view.backgroundColor = .white
+        
+        return navController
+        
     }
-    */
-
+    
 }

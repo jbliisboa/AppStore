@@ -11,24 +11,7 @@ import UIKit
 class TodayDatailViewController: UIViewController {
     
     var centerView: UIView?
-    var frame: CGRect?
+    var frame: CG
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .yellow
-        
-        
-    }
-    
-    func animation () {
-        
-        guard let centerView = self.centerView else {return}
-        guard let frame = self.frame else {return}
-        
-        print(centerView)
-        print(frame)
-        
-    }
     
 }
